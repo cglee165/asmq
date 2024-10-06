@@ -1,0 +1,1254 @@
+section .data
+	clearScreen db 27, '[2J', 0      	; ANSI code to clear screen
+
+	moveCursor0 db 27, '[1;1H'      	
+	moveCursor0_len equ $ - moveCursor0
+
+	text0 db "_____________________________________________________________________________________________________", 10, 0 
+	text0_len equ $ - text0
+
+	moveCursor1 db 27, '[1;1H'      	
+	moveCursor1_len equ $ - moveCursor1
+
+	text1 db "Enrollment status: Enrolled", 10, 0 
+	text1_len equ $ - text1
+
+	moveCursor2 db 27, '[2;1H'     	 
+	moveCursor2_len equ $ - moveCursor2
+
+	text2 db "Term: 1	School Year: 20242025", 10, 0        	 
+	text2_len equ $ - text2
+
+	moveCursor3 db 27, '[4;2H'    	 
+	moveCursor3_len equ $ - moveCursor3
+
+	text3 db "Student #: 202312614", 10, 0
+	text3_len equ $ - text3
+    
+	moveCursor4 db 27, '[5;2H'    	 
+	moveCursor4_len equ $ - moveCursor4
+
+	text4 db "Name	: CATIG, ALLYSSA MARIE E.", 10, 0
+	text4_len equ $ - text4
+    
+	moveCursor69 db 27, '[20;2H'    	 
+	moveCursor69_len equ $ - moveCursor69
+
+	text69 db "College : COMPUTER STUDIES", 10, 0
+	text69_len equ $ - text69
+	
+    moveCursor41 db 27, '[20;2H'    	 
+	moveCursor41_len equ $ - moveCursor41
+
+	text41 db " _________________________________________________________________________________________________", 10, 0
+	text41_len equ $ - text41
+    
+	moveCursor5 db 27, '[8;5H'    	 
+	moveCursor5_len equ $ - moveCursor5
+
+	text5 db "| Course                                                                                          |", 10, 0
+	text5_len equ $ - text5
+    
+	moveCursor88 db 27, '[9;5H'    	 
+	moveCursor88_len equ $ - moveCursor88
+
+	text88 db " _________________________________________________________________________________________________", 10, 0
+	text88_len equ $ - text88
+    
+;INFORMATION MANAGEMENT LECTURE SECTION
+    
+	moveCursor6 db 27, '[10;5H'    	 
+	moveCursor6_len equ $ - moveCursor6
+
+	text6 db "| CCS0021  |", 0
+	text6_len equ $ - text6
+	
+	moveCursor61 db 27, '[10;10H'    	 
+	moveCursor61_len equ $ - moveCursor61
+
+	text61 db " INFORMATION MANAGEMENT (LEC)	|", 0
+	text61_len equ $ - text61
+	
+	moveCursor611 db 27, '[10;20H'    	 
+	moveCursor611_len equ $ - moveCursor611
+
+	text611 db "   TN24   |", 0
+	text611_len equ $ - text611
+	
+	moveCursor6111 db 27, '[10;25H'    	 
+	moveCursor6111_len equ $ - moveCursor6111
+
+	text6111 db "   2   |", 0
+	text6111_len equ $ - text6111
+	
+	moveCursor62 db 27, '[10;30H'    	 
+	moveCursor62_len equ $ - moveCursor62
+
+	text62 db "   T   |", 0
+	text62_len equ $ - text62
+	
+	moveCursor621 db 27, '[10;35H'    	 
+	moveCursor621_len equ $ - moveCursor621
+
+	text621 db " 15:00-18:40 |", 0
+	text621_len equ $ - text621
+	
+	moveCursor6213 db 27, '[10;40H'    	 
+	moveCursor6213_len equ $ - moveCursor6213
+
+	text6213 db " ONLINE |", 10, 0
+	text6213_len equ $ - text6213
+    
+;INFORMATION MANAGEMENT LAB SECTION
+    
+	moveCursor7 db 27, '[12;5H'    	 
+	moveCursor7_len equ $ - moveCursor7
+
+	text7 db "| CCS0021L |", 0
+	text7_len equ $ - text7
+	
+	moveCursor71 db 27, '[12;10H'    	 
+	moveCursor71_len equ $ - moveCursor71
+
+	text71 db " INFORMATION MANAGEMENT (LAB)	|", 0
+	text71_len equ $ - text71
+	
+	moveCursor711 db 27, '[12;20H'    	 
+	moveCursor711_len equ $ - moveCursor711
+
+	text711 db "   TN24   |", 0
+	text711_len equ $ - text711
+	
+	moveCursor72 db 27, '[12;25H'    	 
+	moveCursor72_len equ $ - moveCursor72
+
+	text72 db "   1   |", 0
+	text72_len equ $ - text72
+    
+	moveCursor721 db 27, '[12;30H'    	 
+	moveCursor721_len equ $ - moveCursor721
+
+	text721 db "   F   |",  0
+	text721_len equ $ - text721    
+    
+	moveCursor7213 db 27, '[12;35H'    	 
+	moveCursor7213_len equ $ - moveCursor7213
+
+	text7213 db " 15:00-18:40 |",  0
+	text7213_len equ $ - text7213    
+
+	moveCursor72135 db 27, '[12;40H'    	 
+	moveCursor72135_len equ $ - moveCursor72135
+
+	text72135 db " ONLINE |", 10, 0
+	text72135_len equ $ - text72135 
+    
+;TECHNOPRENEURSHIP SECTION
+    
+	moveCursor8 db 27, '[14;5H'    	 
+	moveCursor8_len equ $ - moveCursor8
+
+	text8 db "| CCS0103  |", 0
+	text8_len equ $ - text8
+    
+	moveCursor81 db 27, '[14;10H'    	 
+	moveCursor81_len equ $ - moveCursor81
+
+	text81 db " TECHNOPRENEURSHIP (CCS)     	|", 0
+	text81_len equ $ - text81
+	
+	moveCursor82 db 27, '[14;15H'    	 
+	moveCursor82_len equ $ - moveCursor82
+
+	text82 db "  TW292   |", 0
+	text82_len equ $ - text82
+	
+    moveCursor83 db 27, '[14;20H'    	 
+	moveCursor83_len equ $ - moveCursor83
+
+	text83 db "   3   |", 0
+	text83_len equ $ - text83
+
+    moveCursor897 db 27, '[14;25H'    	 
+	moveCursor897_len equ $ - moveCursor897
+
+	text897 db "  F/T  |", 0
+	text897_len equ $ - text897
+
+    moveCursor823 db 27, '[14;30H'    	 
+	moveCursor823_len equ $ - moveCursor823
+
+	text823 db " 11:00-12:50 |", 0
+	text823_len equ $ - text823
+
+    moveCursor8231 db 27, '[14;30H'    	 
+	moveCursor8231_len equ $ - moveCursor8231
+
+	text8231 db " ONLINE |", 10, 0
+	text8231_len equ $ - text8231
+
+;END LINE FOR SPACE
+    moveCursor9 db 27, '[15;5H'    	 
+	moveCursor9_len equ $ - moveCursor9
+
+	text9 db " _________________________________________________________________________________________________", 10, 0
+	text9_len equ $ - text9
+    
+	moveCursor10 db 27, '[16;5H'    	 
+	moveCursor10_len equ $ - moveCursor10
+
+	text10 db "| TOTAL UNITS: 6                                                                                  |", 10, 0
+	text10_len equ $ - text10
+    
+	moveCursor79 db 27, '[17;5H'    	 
+	moveCursor79_len equ $ - moveCursor79
+
+	text79 db " _________________________________________________________________________________________________", 10, 0
+	text79_len equ $ - text79
+    
+	moveCursor11 db 27, '[18;5H'    	 
+	moveCursor11_len equ $ - moveCursor11
+
+	text11 db " _________________________________________________________________________________________________", 10, 0
+	text11_len equ $ - text11
+    
+; TUITION AND FINANCE SECTION
+	moveCursor12 db 27, '[19;5H'    	 
+	moveCursor12_len equ $ - moveCursor12
+
+	text12 db "| Tuition Fee (18) ", 0
+	text12_len equ $ - text12
+    
+    moveCursor1297 db 27, '[19;5H'    	 
+	moveCursor1297_len equ $ - moveCursor1297
+
+	text1297 db "                                                               	37,044.00  |", 10, 0
+	text1297_len equ $ - text1297
+    
+	moveCursor13 db 27, '[21;5H'    	 
+	moveCursor13_len equ $ - moveCursor13
+
+	text13 db "| Miscellaneous", 0
+	text13_len equ $ - text13
+    
+    moveCursor1323 db 27, '[21;5H'    	 
+	moveCursor1323_len equ $ - moveCursor1323
+
+	text1323 db "                                                                  	    9,865.00   |", 10, 0
+	text1323_len equ $ - text1323
+    
+	moveCursor14 db 27, '[23;5H'    	 
+	moveCursor14_len equ $ - moveCursor14
+
+	text14 db "| ID Validation Fee", 0
+	text14_len equ $ - text14
+	
+	moveCursor141 db 27, '[23;5H'    	 
+	moveCursor141_len equ $ - moveCursor141
+	
+	text141 db "                                                        	        78.00      |", 10, 0
+	text141_len equ $ - text141
+	
+;-------------------------------------------------------------
+    
+	moveCursor15 db 27, '[25;5H'    	 
+	moveCursor15_len equ $ - moveCursor15
+
+	text15 db "| ITE Computer Laboratory Fee (CS000070)", 0
+	text15_len equ $ - text15
+	
+	moveCursor16 db 27, '[25;5H'    	 
+	moveCursor16_len equ $ - moveCursor16
+
+	text16 db "                                        	    3,914.00   |", 10, 0
+	text16_len equ $ - text16
+    
+    moveCursor17 db 27, '[27;5H'    	 
+	moveCursor17_len equ $ - moveCursor17
+
+	text17 db "| ITE Computer Laboratory Fee (CS0003)", 0
+	text17_len equ $ - text17  
+	
+	moveCursor18 db 27, '[27;5H'    	 
+	moveCursor18_len equ $ - moveCursor18
+
+	text18 db "                                                3,914.00   |", 10, 0
+	text18_len equ $ - text18
+	
+    moveCursor19 db 27, '[29;5H'    	 
+	moveCursor19_len equ $ - moveCursor19
+
+	text19 db "| ITE Computer Laboratory Fee (CS0003)", 0
+	text19_len equ $ - text19  
+	
+	moveCursor20 db 27, '[29;5H'    	 
+	moveCursor20_len equ $ - moveCursor20
+
+	text20 db "                                             	3,914.00   |", 10, 0
+	text20_len equ $ - text20
+
+    moveCursor21 db 27, '[31;5H'    	 
+	moveCursor21_len equ $ - moveCursor21
+
+	text21 db "| PRESENTATION FEE (CCS0103)", 0
+	text21_len equ $ - text21
+
+    moveCursor22 db 27, '[31;10H'    	 
+	moveCursor22_len equ $ - moveCursor22
+
+	text22 db "                                                          1,736.00   |", 10, 0
+	text22_len equ $ - text22
+
+    moveCursor23 db 27, '[33;5H'    	 
+	moveCursor23_len equ $ - moveCursor23
+
+	text23 db "| TOTAL ASSESSMENT ", 0
+	text23_len equ $ - text23
+
+    moveCursor24 db 27, '[33;10H'    	 
+	moveCursor24_len equ $ - moveCursor24
+
+	text24 db "                                                                   60,465     |", 10, 0
+	text24_len equ $ - text24
+	
+	moveCursor25 db 27, '[35;10H'    	 
+	moveCursor25_len equ $ - moveCursor25
+
+	text25 db "|                                                                                                 |", 10, 0
+	text25_len equ $ - text25
+	
+	moveCursor26 db 27, '[37;10H'    	 
+	moveCursor26_len equ $ - moveCursor26
+
+	text26 db "| Persons With Disability Benefit 20 (20% 0f Tuition Fee)", 0
+	text26_len equ $ - text26
+
+	moveCursor27 db 27, '[37;10H'    	 
+	moveCursor27_len equ $ - moveCursor27
+
+	text27 db "                             7,408.80   |", 10, 0
+	text27_len equ $ - text27
+	
+	moveCursor28 db 27, '[37;10H'    	 
+	moveCursor28_len equ $ - moveCursor28
+
+	text28 db "| Downpayment (Upon Enrollment) 40%", 0
+	text28_len equ $ - text28
+	
+	moveCursor29 db 27, '[37;10H'    	 
+	moveCursor29_len equ $ - moveCursor29
+
+	text29 db "                                                   21,222.48  |", 10, 0
+	text29_len equ $ - text29
+	
+	moveCursor30 db 27, '[37;10H'    	 
+	moveCursor30_len equ $ - moveCursor30
+
+	text30 db "| Midterm(Oct 14 - Oct 16 2024) 30%", 10, 0
+	text30_len equ $ - text30
+
+section .bss
+
+        enroll_input resb 25
+        enroll_inputlen equ $- enroll_input
+        
+        term_input resb 2
+        term_inputlen equ $- term_input
+        
+        sy_input resb 8
+        sy_inputlen equ $- sy_input
+        
+        studentid_input resb 9
+        studentid_inputlen equ $- studentid_input
+        
+        name_input resb 30
+        name_inputlen equ $- name_input
+        
+        college_input resb 15
+        college_inputlen equ $- college_input
+
+
+
+
+
+
+section .text
+	global _start
+
+_start:
+	call clearTheScreen
+	call displayText0
+	call displayText1
+	call displayText2
+	call displayText3
+	call displayText4
+	call displayText69
+	call displayText41   
+	call displayText5
+	call displayText88
+;
+	call displayText6
+	call displayText61
+	call displayText611
+	call displayText6111
+	call displayText62
+	call displayText621
+	call displayText6213
+;
+	call displayText7
+	call displayText71
+	call displayText711
+	call displayText72
+	call displayText721
+	call displayText7213
+	call displayText72135
+;
+	call displayText8
+    call displayText81
+    call displayText82
+    call displayText83
+    call displayText897
+    call displayText823
+    call displayText8231
+;
+	call displayText9
+	call displayText10
+	call displayText79
+	call displayText11
+	call displayText12
+	call displayText1297
+	
+
+	call displayText13
+	call displayText1323
+	call displayText14
+    call displayText141
+    call displayText15
+    call displayText16
+    call displayText17
+    call displayText18
+    call displayText19
+    call displayText20
+    call displayText21
+    call displayText22
+    call displayText23
+    call displayText24
+    call displayText25
+    call displayText26
+    call displayText27
+    call displayText28
+    call displayText29
+    call displayText30
+
+	call exitProgram
+
+; Clear the screen
+clearTheScreen:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, clearScreen
+	mov edx, 4
+	int 0x80
+	ret
+
+; Display "Enrollment status: Enrolled" at row 1, col 38
+
+displayText0:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor0
+	mov edx, moveCursor0_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text0
+	mov edx, text0_len
+	int 0x80
+	ret
+
+displayText1:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor1
+	mov edx, moveCursor1_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text1
+	mov edx, text1_len
+	int 0x80
+	ret
+
+; Display "tejuco" at row 2, col 36
+displayText2:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor2
+	mov edx, moveCursor2_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text2
+	mov edx, text2_len
+	int 0x80
+	ret
+
+; Display "javier" at row 5, col 37
+displayText3:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor3
+	mov edx, moveCursor3_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text3
+	mov edx, text3_len
+	int 0x80
+	ret
+
+displayText4:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor4
+	mov edx, moveCursor4_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text4
+	mov edx, text4_len
+	int 0x80
+	ret
+    
+displayText69:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor69
+	mov edx, moveCursor69_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text69
+	mov edx, text69_len
+	int 0x80
+	ret    
+
+displayText41:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor41
+	mov edx, moveCursor41_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text41
+	mov edx, text41_len
+	int 0x80
+	ret    
+
+displayText5:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor5
+	mov edx, moveCursor5_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text5
+	mov edx, text5_len
+	int 0x80
+	ret
+
+displayText88:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor88
+	mov edx, moveCursor88_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text88
+	mov edx, text88_len
+	int 0x80
+	ret    
+
+displayText6:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor6
+	mov edx, moveCursor6_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text6
+	mov edx, text6_len
+	int 0x80
+	ret
+
+displayText61:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor61
+	mov edx, moveCursor61_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text61
+	mov edx, text61_len
+	int 0x80
+	ret
+	
+displayText611:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor611
+	mov edx, moveCursor611_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text611
+	mov edx, text611_len
+	int 0x80
+	ret
+	
+displayText6111:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor6111
+	mov edx, moveCursor6111_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text6111
+	mov edx, text6111_len
+	int 0x80
+	ret
+	
+displayText62:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor62
+	mov edx, moveCursor62_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text62
+	mov edx, text62_len
+	int 0x80
+	ret
+
+displayText621:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor621
+	mov edx, moveCursor621_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text621
+	mov edx, text621_len
+	int 0x80
+	ret
+
+displayText6213:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor6213
+	mov edx, moveCursor6213_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text6213
+	mov edx, text6213_len
+	int 0x80
+	ret
+
+displayText7:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor7
+	mov edx, moveCursor7_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text7
+	mov edx, text7_len
+	int 0x80
+	ret
+
+displayText71:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor71
+	mov edx, moveCursor71_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text71
+	mov edx, text71_len
+	int 0x80
+	ret
+
+displayText711:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor711
+	mov edx, moveCursor711_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text711
+	mov edx, text711_len
+	int 0x80
+	ret
+
+displayText72:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor72
+	mov edx, moveCursor72_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text72
+	mov edx, text72_len
+	int 0x80
+	ret
+
+displayText721:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor721
+	mov edx, moveCursor721_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text721
+	mov edx, text721_len
+	int 0x80
+	ret
+
+displayText7213:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor7213
+	mov edx, moveCursor7213_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text7213
+	mov edx, text7213_len
+	int 0x80
+	ret
+
+displayText72135:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor72135
+	mov edx, moveCursor72135_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text72135
+	mov edx, text72135_len
+	int 0x80
+	ret
+
+;INFORMATION MANAGEMENT LAB
+
+displayText8:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor8
+	mov edx, moveCursor8_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text8
+	mov edx, text8_len
+	int 0x80
+	ret    
+	
+displayText81:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor81
+	mov edx, moveCursor81_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text81
+	mov edx, text81_len
+	int 0x80
+	ret    
+	
+displayText82:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor82
+	mov edx, moveCursor82_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text82
+	mov edx, text82_len
+	int 0x80
+	ret    
+
+displayText83:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor83
+	mov edx, moveCursor83_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text83
+	mov edx, text83_len
+	int 0x80
+	ret    
+
+displayText897:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor897
+	mov edx, moveCursor897_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text897
+	mov edx, text897_len
+	int 0x80
+	ret    
+
+displayText823:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor823
+	mov edx, moveCursor823_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text823
+	mov edx, text823_len
+	int 0x80
+	ret    	
+
+displayText8231:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor8231
+	mov edx, moveCursor8231_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text8231
+	mov edx, text8231_len
+	int 0x80
+	ret    	
+
+
+
+;
+
+displayText9:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor9
+	mov edx, moveCursor9_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text9
+	mov edx, text9_len
+	int 0x80
+	ret
+
+displayText10:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor10
+	mov edx, moveCursor10_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text10
+	mov edx, text10_len
+	int 0x80
+	ret
+    
+displayText79:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor79
+	mov edx, moveCursor79_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text79
+	mov edx, text79_len
+	int 0x80
+	ret
+
+displayText11:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor11
+	mov edx, moveCursor11_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text11
+	mov edx, text11_len
+	int 0x80
+	ret
+
+displayText12:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor12
+	mov edx, moveCursor12_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text12
+	mov edx, text12_len
+	int 0x80
+	ret
+
+displayText1297:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor1297
+	mov edx, moveCursor1297_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text1297
+	mov edx, text1297_len
+	int 0x80
+	ret
+
+
+displayText13:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor13
+	mov edx, moveCursor13_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text13
+	mov edx, text13_len
+	int 0x80
+	ret
+	
+displayText1323:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor1323
+	mov edx, moveCursor1323_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text1323
+	mov edx, text1323_len
+	int 0x80
+	ret
+
+displayText14:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor14
+	mov edx, moveCursor14_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text14
+	mov edx, text14_len
+	int 0x80
+	ret
+	
+displayText141:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor141
+	mov edx, moveCursor141_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text141
+	mov edx, text141_len
+	int 0x80
+	ret
+
+displayText15:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor15
+	mov edx, moveCursor15_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text15
+	mov edx, text15_len
+	int 0x80
+	ret
+
+displayText16:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor16
+	mov edx, moveCursor16_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text16
+	mov edx, text16_len
+	int 0x80
+	ret
+
+displayText17:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor17
+	mov edx, moveCursor17_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text17
+	mov edx, text17_len
+	int 0x80
+	ret
+
+displayText18:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor18
+	mov edx, moveCursor18_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text18
+	mov edx, text18_len
+	int 0x80
+	ret
+
+displayText19:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor19
+	mov edx, moveCursor19_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text19
+	mov edx, text19_len
+	int 0x80
+	ret
+
+displayText20:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor20
+	mov edx, moveCursor20_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text20
+	mov edx, text20_len
+	int 0x80
+	ret
+
+displayText21:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor21
+	mov edx, moveCursor21_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text21
+	mov edx, text21_len
+	int 0x80
+	ret
+
+displayText22:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor22
+	mov edx, moveCursor22_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text22
+	mov edx, text22_len
+	int 0x80
+	ret
+
+displayText23:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor23
+	mov edx, moveCursor23_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text23
+	mov edx, text23_len
+	int 0x80
+	ret
+
+displayText24:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor24
+	mov edx, moveCursor24_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text24
+	mov edx, text24_len
+	int 0x80
+	ret
+
+displayText25:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor25
+	mov edx, moveCursor25_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text25
+	mov edx, text25_len
+	int 0x80
+	ret
+
+displayText26:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor26
+	mov edx, moveCursor26_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text26
+	mov edx, text26_len
+	int 0x80
+	ret
+
+displayText27:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor27
+	mov edx, moveCursor27_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text27
+	mov edx, text27_len
+	int 0x80
+	ret
+
+displayText28:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor28
+	mov edx, moveCursor28_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text28
+	mov edx, text28_len
+	int 0x80
+	ret
+
+displayText29:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor29
+	mov edx, moveCursor29_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text29
+	mov edx, text29_len
+	int 0x80
+	ret
+
+displayText30:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, moveCursor30
+	mov edx, moveCursor30_len
+	int 0x80
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, text30
+	mov edx, text30_len
+	int 0x80
+	ret
+
+
+
+; Exit program
+exitProgram:
+	mov eax, 1
+	int 0x80
